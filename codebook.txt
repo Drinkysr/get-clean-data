@@ -26,7 +26,8 @@ To keep variable name length reasonable, the variables were encoded using concat
 
 There are a total of 180 observations - one for each of the 30 subjects performing each of 6 activities.
 
-All of these values are numeric and have been regularized so that their range is [-1,1]
+All of these values are numeric and have been regularized so that their range is [-1,1]. Since the variables are
+regularized they are unitless. 
 
 3         timeBodyAccMeanX
 4         timeBodyAccMeanY

@@ -1,0 +1,96 @@
+###Codebook for run_analysis.R##
+##
+
+Data Dictionary
+
+1: id - the id of the subject performing the activity
+2: activity - a description of the activity being performed, a factor variable with 6 levels:
+        walking, upstairs, downstairs, sitting, standing, laying. Note that "upstairs" and "downstairs"
+        indicate "waliking upstairs" and "walking downstairs", respectively.
+
+Each of the next 66 variables represents either a mean of means, or a mean of standard deviations of an average of 57.2 
+measurements of the constituent variable selected from the Samsung data. These measurements were either in the 
+time for frequency domain, measured body or gravity components and were in the X, Y or Z axis (where appropriate).
+
+To keep variable name length reasonable, the variables were encoded using concatenated text in camel caps format:
+ - "time" or "freq" to indicate time or frequency domain
+ - "Body" or "Gravity" to indicate the component
+ - the name of the particular measurment (e.g. "GyroJerkMag" for Gyroscope Jerk Magnitude), possble entries in 
+        this part of the name include:
+                -"Acc" : accelerometer
+                -"Jerk" : refers to a measurment of jerk motion
+                -"Mag" : magnitude
+                -"Gyro": gyroscope measurement
+ - "Mean" or "Std" to indicate whether the column is a mean of means or a mean of standard deviations 
+ - "X","Y", or "Z" to indicate the axis of measurment where appropriate
+
+There are a total of 180 observations - one for each of the 30 subjects performing each of 6 activities.
+
+All of these values are numeric and have been regularized so that their range is [-1,1]
+
+3         timeBodyAccMeanX
+4         timeBodyAccMeanY
+5         timeBodyAccMeanZ
+6          timeBodyAccStdX
+7          timeBodyAccStdY
+8          timeBodyAccStdZ
+9      timeGravityAccMeanX
+10     timeGravityAccMeanY
+11     timeGravityAccMeanZ
+12      timeGravityAccStdX
+13      timeGravityAccStdY
+14      timeGravityAccStdZ
+15    timeBodyAccJerkMeanX
+16    timeBodyAccJerkMeanY
+17    timeBodyAccJerkMeanZ
+18     timeBodyAccJerkStdX
+19     timeBodyAccJerkStdY
+20     timeBodyAccJerkStdZ
+21       timeBodyGyroMeanX
+22       timeBodyGyroMeanY
+23       timeBodyGyroMeanZ
+24        timeBodyGyroStdX
+25        timeBodyGyroStdY
+26        timeBodyGyroStdZ
+27   timeBodyGyroJerkMeanX
+28   timeBodyGyroJerkMeanY
+29   timeBodyGyroJerkMeanZ
+30    timeBodyGyroJerkStdX
+31    timeBodyGyroJerkStdY
+32    timeBodyGyroJerkStdZ
+33      timeBodyAccMagMean
+34       timeBodyAccMagStd
+35   timeGravityAccMagMean
+36    timeGravityAccMagStd
+37  timeBodyAccJerkMagMean
+38   timeBodyAccJerkMagStd
+39     timeBodyGyroMagMean
+40      timeBodyGyroMagStd
+41 timeBodyGyroJerkMagMean
+42  timeBodyGyroJerkMagStd
+43        freqBodyAccMeanX
+44        freqBodyAccMeanY
+45        freqBodyAccMeanZ
+46         freqBodyAccStdX
+47         freqBodyAccStdY
+48         freqBodyAccStdZ
+49    freqBodyAccJerkMeanX
+50    freqBodyAccJerkMeanY
+51    freqBodyAccJerkMeanZ
+52     freqBodyAccJerkStdX
+53     freqBodyAccJerkStdY
+54     freqBodyAccJerkStdZ
+55       freqBodyGyroMeanX
+56       freqBodyGyroMeanY
+57       freqBodyGyroMeanZ
+58        freqBodyGyroStdX
+59        freqBodyGyroStdY
+60        freqBodyGyroStdZ
+61      freqBodyAccMagMean
+62       freqBodyAccMagStd
+63  freqBodyAccJerkMagMean
+64   freqBodyAccJerkMagStd
+65     freqBodyGyroMagMean
+66      freqBodyGyroMagStd
+67 freqBodyGyroJerkMagMean
+68  freqBodyGyroJerkMagStd
